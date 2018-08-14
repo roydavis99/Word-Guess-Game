@@ -1,0 +1,41 @@
+:root{
+    --background-color: black;
+    --border-color: white;
+    --maxHeight: 800px;
+}
+
+body{
+    background-color: var(--background-color);
+    
+}
+
+.gameName{
+    color: blue;
+    font-weight: bold;
+    font-size: 80px;
+    margin: 50px;
+    text-align: center;
+}
+
+.game-body{
+    
+    width: 508px;
+    height: var(--maxHeight);
+    margin: 150px auto;
+}
+
+.guess-zone,
+.game-body,
+.display-zone
+{
+    border-style: dashed;
+    border-color: var(--border-color);
+    border-width: 2px;
+}
+
+.guess-zone,
+.display-zone{
+    float: left;
+    width: 250px;
+    height: var(--maxHeight);
+}
