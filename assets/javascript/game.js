@@ -1,7 +1,7 @@
 var maxGuessCount = 10;
-var movies = ["Jurassic Park", "Star Wars", "Indianna Johns", "Avengers", 
-                "Sky Captian and the World of Tomorrow",
-                "Zombi Land"];
+var movies = ["Jurassic Park", "Star Wars", "Indiana Jones", "Avengers", 
+                "Sky Captain and the World of Tomorrow",
+                "Zombie Land"];
 
 var possible = "abcdefghijklmnopqrstuvwxyz";
 
@@ -13,3 +13,9 @@ var letters = [];
 var answer = movies[Math.floor(Math.random() * movies.length)];
 
 console.debug(answer);
+
+
+function win(){
+    document.getElementById("game-img").src="./assets/images/bla.jpg";
+    
+}
