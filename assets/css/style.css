@@ -2,11 +2,12 @@
     --background-color: black;
     --border-color: white;
     --maxHeight: 800px;
+    --color: white;
 }
 
 body{
     background-color: var(--background-color);
-    
+    color: var(--color);
 }
 
 .gameName{

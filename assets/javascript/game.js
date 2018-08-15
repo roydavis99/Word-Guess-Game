@@ -14,6 +14,15 @@ var answer = movies[Math.floor(Math.random() * movies.length)];
 
 console.debug(answer);
 
+//Update display
+function setDisplay(){
+    
+    answer.forEach(letter => {
+        if(letter === " "){
+
+        }
+    });
+}
 
 function win(){
     document.getElementById("game-img").src="./assets/images/bla.jpg";
