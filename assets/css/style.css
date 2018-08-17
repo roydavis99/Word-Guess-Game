@@ -1,13 +1,19 @@
 :root{
     --background-color: black;
     --border-color: white;
-    --maxHeight: 800px;
+    --maxHeight: 375px;
     --color: white;
+    --font-family: 'Baloo Bhai', cursive;
 }
 
 body{
     background-color: var(--background-color);
     color: var(--color);
+    font-family: var(--font-family);
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .gameName{
@@ -23,6 +29,7 @@ body{
     width: 508px;
     height: var(--maxHeight);
     margin: 150px auto;
+    margin-bottom: 0px;
 }
 
 .guess-zone,
@@ -39,4 +46,20 @@ body{
     float: left;
     width: 250px;
     height: var(--maxHeight);
+}
+
+.text{
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.center{
+    margin: 5px;
+}
+
+#game-img{
+    width: 240px;
+
 }
