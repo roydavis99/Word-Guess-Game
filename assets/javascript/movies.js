@@ -1,4 +1,4 @@
-var movies = [
+var moviesCol = [
     "Jurassic Park", 
     "Star Wars", 
     "Indiana Jones", 
@@ -7,5 +7,8 @@ var movies = [
     "Mamma Mia", 
     "Incredibles",
     "Zombie Land", 
-    "Hotel Transylvania"
+    "Hotel Transylvania",
+    "Jurassic World",
+    "IT",
+    "Wreck it Ralph"
 ];

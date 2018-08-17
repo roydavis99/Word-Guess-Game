@@ -3,6 +3,7 @@ var maxGuessCount = 10;
 
 var possible = "abcdefghijklmnopqrstuvwxyz";
 
+var movies = moviesCol;
 var isPlaying = false;
 var wins = 0;
 var loss = 0;
@@ -13,6 +14,7 @@ var currentWordText = document.getElementById("current-word");
 var guessesMadeText = document.getElementById("guesses-made");
 var guessesLeftText = document.getElementById("guesses-left");
 var winsText = document.getElementById("wins");
+var missText = document.getElementById("miss");
 
 console.debug(answer);
 reset();
@@ -50,6 +52,7 @@ function setDisplay() {
     guessesMadeText.textContent = guesses;
     guessesLeftText.textContent = maxGuessCount - bad.length;
     winsText.textContent = wins;
+    missText.textContent = loss;
 }
 
 document.onkeyup = function (event) {
@@ -77,19 +80,38 @@ function gameWin() {
     document.getElementById("game-img").src = image;
     wins++;
     isPlaying = false;
+    remove(movies, answer);
     //playAudio(answer);
+}
+function remove(){
+    var newcol =[];
+    movies.forEach(item => {
+        if(item != answer){
+            newcol.push(item);
+        }
+    });
+    movies = newcol;
 }
 
 function reset(){
     bad = [];
     good = [];
+    if(movies.length<1){
+        resetMovies();
+    }
     answer = movies[Math.floor(Math.random() * movies.length)];
     isPlaying = true;
+    
+}
+
+function resetMovies(){
+    movies = moviesCol;
 }
 
 function gameLoss() {
     isPlaying = false;
     loss++;
+    remove(movies, answer);
     //playAudio("loss");
 }
 
