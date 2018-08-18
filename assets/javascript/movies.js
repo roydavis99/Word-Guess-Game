@@ -10,5 +10,13 @@ var moviesCol = [
     "Hotel Transylvania",
     "Jurassic World",
     "IT",
-    "Wreck it Ralph"
+    "Wreck it Ralph",
+    "Dark Knight",
+    "Despicable Me",
+    "Bolt",
+    "Moana",
+    "Dirty Dancing",
+    "Kingsman",
+    "Blazing Saddles",
+    "Bad Moms"
 ];

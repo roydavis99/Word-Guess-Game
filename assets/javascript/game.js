@@ -63,6 +63,8 @@ document.onkeyup = function (event) {
         return;
     }
 
+    document.getElementById("commentTag").style.visibility = "hidden";
+
     if (!possible.includes(key)) {
         return;
     }
@@ -76,12 +78,13 @@ document.onkeyup = function (event) {
 }
 
 function gameWin() {
-    var image = "./assets/images/" + answer + ".jpg"
+    var image = "./assets/images/" + answer + ".jpg";
     document.getElementById("game-img").src = image;
     wins++;
     isPlaying = false;
     remove(movies, answer);
     //playAudio(answer);
+    document.getElementById("commentTag").style.visibility = "visible";
 }
 function remove(){
     var newcol =[];
@@ -112,6 +115,9 @@ function gameLoss() {
     isPlaying = false;
     loss++;
     remove(movies, answer);
+    document.getElementById("commentTag").style.visibility = "visible";
+    var image = "./assets/images/loss.jpg";
+    document.getElementById("game-img").src = image;
     //playAudio("loss");
 }
 

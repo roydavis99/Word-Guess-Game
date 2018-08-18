@@ -4,6 +4,12 @@
     --maxHeight: 400px;
     --color: white;
     --font-family: 'Baloo Bhai', cursive;
+    --answer-font-family: 'Luckiest Guy', cursive;
+    --title-font-family: 'Gravitas One', cursive;
+    /*
+    'Holtwood One SC', serif;
+font-family: 'Gravitas One', cursive;
+*/
 }
 
 body{
@@ -20,23 +26,24 @@ body{
     color: blue;
     font-weight: bold;
     font-size: 80px;
-    margin: 50px;
+    margin: 45px 0px 20px 0px;
     text-align: center;
+    font-family: var(--title-font-family);
 }
 
 .game-body{
     
-    width: 508px;
+    width: 518px;
     height: var(--maxHeight);
-    margin: 150px auto;
+    margin: 60px auto;
     margin-bottom: 0px;
 }
 
 .guess-zone,
-.game-body,
+/* .game-body, */
 .display-zone
 {
-    border-style: dashed;
+    border-style: solid;
     border-color: var(--border-color);
     border-width: 2px;
 }
@@ -46,13 +53,27 @@ body{
     float: left;
     width: 250px;
     height: var(--maxHeight);
+    
 }
+
+.display-zone{
+    height: auto;
+    margin-right: 10px;
+}
+
 
 .text{
     letter-spacing: 2px;
     font-size: 20px;
     text-align: center;
     line-height: 20px;
+    opacity: 1;
+    color: var(--color);
+}
+
+.tag{
+    color: rgb(112, 111, 111);
+    font-style: italic;
 }
 
 .center{
@@ -62,4 +83,13 @@ body{
 #game-img{
     width: 240px;
 
+}
+
+#current-word{    
+    font-size: 30px;
+    /* text-decoration: underline; */
+    font-family: var(--answer-font-family);
+    line-height: 30px;
+    font-weight: bold;
+    color: white;
 }
