@@ -6,10 +6,6 @@
     --font-family: 'Baloo Bhai', cursive;
     --answer-font-family: 'Luckiest Guy', cursive;
     --title-font-family: 'Gravitas One', cursive;
-    /*
-    'Holtwood One SC', serif;
-font-family: 'Gravitas One', cursive;
-*/
 }
 
 body{
@@ -40,7 +36,6 @@ body{
 }
 
 .guess-zone,
-/* .game-body, */
 .display-zone
 {
     border-style: solid;
@@ -87,7 +82,6 @@ body{
 
 #current-word{    
     font-size: 30px;
-    /* text-decoration: underline; */
     font-family: var(--answer-font-family);
     line-height: 30px;
     font-weight: bold;
