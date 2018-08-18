@@ -1,8 +1,5 @@
 var maxGuessCount = 10;
 
-
-var possible = "abcdefghijklmnopqrstuvwxyz";
-
 var movies = moviesCol;
 var isPlaying = false;
 var wins = 0;
@@ -17,7 +14,7 @@ var winsText = document.getElementById("wins");
 var missText = document.getElementById("miss");
 
 console.debug(answer);
-reset();
+resetGameState();
 setDisplay();
 
 //Update display
@@ -58,14 +55,14 @@ function setDisplay() {
 document.onkeyup = function (event) {
     var key = event.key.toLowerCase();
     if(!isPlaying){
-        reset();
+        resetGameState();
         setDisplay();
         return;
     }
 
     document.getElementById("commentTag").style.visibility = "hidden";
 
-    if (!possible.includes(key)) {
+    if (!key.match("[a-z]")) {
         return;
     }
     else if (!good.includes(key) && answer.toLowerCase().includes(key)) {
@@ -96,7 +93,7 @@ function remove(){
     movies = newcol;
 }
 
-function reset(){
+function resetGameState(){
     bad = [];
     good = [];
     if(movies.length<1){
@@ -118,7 +115,6 @@ function gameLoss() {
     document.getElementById("commentTag").style.visibility = "visible";
     var image = "./assets/images/loss.jpg";
     document.getElementById("game-img").src = image;
-    //playAudio("loss");
 }
 
 function playAudio(name){
